@@ -1,0 +1,32 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+
+.chef {
+    &__title{
+        h2{
+            font-size: 30px;
+            text-align: center;
+            padding: 2rem 0;
+        }
+    }
+
+    &__wrapper {
+        @include evenGrid(4, 0.3rem);
+        justify-items: center;
+    }
+    &__card {
+        text-align: center;
+        margin-bottom: 4rem;
+        img {
+            border-radius: 1.5rem;
+        }
+        h3 {
+            font-size: 21px;
+        }
+        p {
+            color: $clr--secondary;
+            font-weight: 600;
+        }
+    }
+}

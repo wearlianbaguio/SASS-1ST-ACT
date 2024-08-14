@@ -1,0 +1,43 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+
+.MenuList {
+    padding: 5rem 0;
+    &__title {
+        @include centerAll;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    h2{
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        margin-top: -2.5rem;
+    }
+    &__wrapper{
+        @include evenGrid(2, 1rem);
+        justify-items: center;
+        
+    }
+    &__food{
+        ul{
+            @include between;
+            li{
+                color: $clr--secondary;
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+        }
+        p{
+            margin-bottom: 2rem;
+        }
+    }
+    &__buo{
+        img{
+            border-radius: 2rem;
+            max-width: 68rem;
+            margin-left: 10.8rem;
+            margin-top: 1rem;
+        }
+    }
+}

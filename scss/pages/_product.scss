@@ -1,0 +1,83 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+
+.product {
+    padding: 5rem 0;
+    &__title {
+        @include centerAll;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    h2{
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-family: $font-secondary;
+    }
+    &__divider { 
+        @include unevenGrid(64rem auto, 10px)
+    }
+    &__wrapper{
+        @include unevenGrid(1fr 1fr 1fr, 3rem);
+        place-content: center;
+    }
+    &__card {
+        padding: 3rem 1rem;
+        text-align: center;
+        border: 2px solid $clr--secondary;
+        border-radius: 2rem;
+        img {
+            width: 11rem;
+        }
+        h4 {
+            font-size: 25px;
+        }
+    }
+    &__details {
+        p {
+        color: $clr--secondary;
+        margin-bottom: 2rem;
+        font-weight: 600;
+        }
+        i {
+            padding-right: 1rem;
+        }
+    }
+    &__hanap {
+        color: $clr--light;
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        margin-bottom: 2.5rem;
+        border-radius: 1rem;
+        max-width: 14rem;
+        input{
+            background-color: transparent;
+            color: $clr--light;
+            &::placeholder {
+                color: $clr--light;
+            }
+        }
+    }
+    &__category {
+        padding: 2rem;
+        margin-bottom: 2.5rem;
+        border-radius: 1rem;
+        max-width: 14rem;
+        h4 {
+            font-weight: 900;
+        }
+        h3 {
+            font-size: 24px;
+            font-weight: 900;
+        }
+    }
+    &__baga {
+        display: flex;
+        gap: 2rem;
+        line-height: 2.5rem;
+    }
+    &__search {
+        margin-left: 8.5rem;
+    }
+}

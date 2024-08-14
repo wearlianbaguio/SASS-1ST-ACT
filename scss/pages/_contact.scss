@@ -1,0 +1,103 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+
+.contact {
+    &__submit {
+        label {
+            margin-left: 0.5rem;
+        }
+    }
+    height: 105rem;
+    &__items{
+        display: grid;
+        grid-template-columns: 18.5rem 18.5rem 18.5rem ;
+        justify-content: center;
+        padding: 3.5rem 0;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        i {
+            font-size: 2rem;
+            color: $clr--secondary;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+    &__image {
+            max-width: 62rem;
+            margin-left: 14rem;
+            img {
+                border-radius: 2rem;
+            }
+    }
+    &__words {
+        @include centerAll;
+        display: flex;
+        flex-direction: column;
+        margin: 2rem 0 1.5rem ;
+        h2 {
+            font-weight: 600;
+            font-size: 33px;
+        }
+    }
+    &__forms {
+        line-height: 2rem;
+        @include evenGrid(2, 2rem);
+        padding: 0 10rem;
+        margin-left: 3.5rem;
+        max-width: 82.5rem;
+    }
+    &__top {
+        display: flex;
+        flex-direction: column;
+        input {
+            border-radius: 1rem;
+            padding: 1rem;
+            background-color: transparent;
+            border: 1px solid $clr--light;
+            color: $clr--light
+        }
+    }
+    &__middle {
+        line-height: 2rem;
+        margin-top: 2rem;
+        margin-left: 13.5rem;
+        display: flex;
+        flex-direction: column;
+        width: 69.5%;
+        input {
+            border-radius: 1rem;
+            padding: 1rem;
+            background-color: transparent;
+            border: 1px solid $clr--light;
+            color: $clr--light
+        }
+    }
+    &__bottom {
+        line-height: 2.3rem;
+        margin-top: 2rem;
+        margin-left: 13.5rem;
+        display: flex;
+        flex-direction: column;
+        textarea {
+            width: 81.4%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            border: 1px solid $clr--light;
+            border-radius: 1rem;
+            background-color: transparent;
+            font-size: 16px;
+            resize: none;
+            color: $clr--light
+        }
+    }&__button {
+        @include centerAll;
+        margin-top: 2.5rem;
+    }
+}
