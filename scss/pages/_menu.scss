@@ -33,11 +33,33 @@
         }
     }
     &__buo{
-        img{
-            border-radius: 2rem;
+        // img{
+        //     border-radius: 2rem;
+        //     max-width: 68rem;
+        //     margin-left: 10.8rem;
+        //     margin-top: 1rem;
+        // }
+        img {
             max-width: 68rem;
-            margin-left: 10.8rem;
-            margin-top: 1rem;
+            position: relative;
+            left: 6rem;
+            margin-top: 2rem;
+            border-radius: 2rem;
+        }
+        
+    }
+}
+
+@include mediaQuery(520px) {
+    .MenuList {
+        &__wrapper {
+            @include evenGrid(1, 0);
+        }
+        &__buo {
+            img {
+                left: 0;
+                margin-top: 0;
+            }
         }
     }
 }

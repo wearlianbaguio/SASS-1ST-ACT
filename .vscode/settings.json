@@ -1,0 +1,22 @@
+{
+    "files.autoSave": "afterDelay",
+
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".min.css",
+            "savePath": "/dist/css",
+        },
+    ],
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "tailwindCSS.lint.cssConflict": "ignore",
+    "tailwindCSS.lint.invalidApply": "ignore",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.codeActionsOnSave": {
+        
+    }
+
+}

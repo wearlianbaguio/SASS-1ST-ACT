@@ -4,9 +4,12 @@
 
 .blog {
     height: 107.5em;
+    &__wrapper {
+        @include evenGrid(1, 1rem);
+        justify-items: center;
+    }
     &__more {
         padding-top: 3rem;
-        margin-left: 13.5rem;
         display: flex;
         flex-direction: column;
         img {
@@ -25,10 +28,10 @@
             margin-bottom: 2rem;
         }
     }
-    &__wrapper {
-        a {
-            margin-left: 13.2rem;
-        }
+}
+
+@include mediaQuery(520px) {
+    .blog {
+        height: 78rem;
     }
-    
 }

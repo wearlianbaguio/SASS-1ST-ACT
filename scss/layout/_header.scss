@@ -2,88 +2,89 @@
 @use "../base/" as *;
 
 .header {
-    padding: 1rem 0;
-    position: sticky;
-    box-shadow: rgba(227, 49, 10, 0.1) 0px 4px 12px;
-    &__wrapper {
-        @include between;
+  padding: 1rem 0;
+  position: sticky;
+  box-shadow: rgba(227, 49, 10, 0.1) 0px 4px 12px;
+  &__wrapper {
+    @include between;
+  }
+  &__logo img {
+    width: 10rem;
+    height: 3rem;
+  }
+  &__nav {
+    display: flex;
+    gap: 1rem;
+    li a {
+      color: $clr--light;
+      &:hover {
+        color: $clr--light;
+      }
     }
-    &__logo img{
-        width: 10rem;
-        height: 3rem;
+  }
+  &__toggle {
+    display: none;
+    span {
+      background-color: $clr--light;
+      width: 3rem;
+      height: 0.6rem;
+      display: block;
+      border: 2px solid transparent;
+      border-radius: 1rem;
     }
-    &__nav{
-        display: flex;
-        gap: 1rem;
-        li a{
-            color: $clr--dark;
-                &:hover{
-                    color: $clr--dark
-                }
+  }
+}
+@include mediaQuery(520px) {
+  .header {
+    &__nav {
+        li a {
+            font-size: 30px;
         }
+    }
+    &__wrapper {
+      img {
+        max-width: 200%;
+      }
     }
     &__toggle {
-        display: none;
-        span {
-            background-color: $clr--light;
-            width: 3rem;
-            height: 0.6rem;
-            display: block;
-            border: 2px solid transparent;
-            border-radius: 1rem;
-        }
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
     }
+    &__nav {
+      position: fixed;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $clr--primary;
+      flex-direction: column;
+      text-align: center;
+      right: -100%;
+      transform: translateY(-15rem);
+      margin-top: 20.6rem;
+      z-index: 9999;
+      transition: 0.5s ease;
+      justify-content: center;
     }
-    @include mediaQuery(520px) {
-        .header {
-            &__wrapper {
-                img {
-                    max-width: 200%;   
-                }    
-            }
-            &__toggle {
-                display: flex;
-                flex-direction: column;
-                gap: 0.2rem;
-            }
-            &__nav {
-                position: fixed;
-                top: 0;
-                height: 100%;
-                width: 100%;
-                background-color: $clr--primary;
-                flex-direction: column;
-                text-align: center;
-                right: -100%;
-                transform: translateY(-15rem);
-                margin-top: 20.6rem;
-                z-index: 9999;
-                transition: 0.5s ease;
-                justify-content: center;
-            }
-            &__nav{
-                &.open {
-                right: 0;
-                transition: 0.5s ease;
-                display: flex;
-                margin-right: 4.5rem;
-                } 
-            }
-            &__toggle.open span:first-child {
-                transform: translate(0, 19.5px) rotate(225deg);
-                transition: 0.5s ease;
-            }
-            &__toggle.open span:nth-child(2) {
-                opacity: 0;
-                transition: all 0.5s ease;
-            }
-            &__toggle.open span:last-child {
-                transform: translate(0, -6px) rotate(-225deg);
-                transition: 0.5s ease;
-            }
-        }
+    &__nav {
+      &.open {
+        right: 0;
+        transition: 0.5s ease;
+        display: flex;
 
+      }
     }
-
-
-
+    &__toggle.open span:first-child {
+      transform: translate(0, 19.5px) rotate(225deg);
+      transition: 0.5s ease;
+    }
+    &__toggle.open span:nth-child(2) {
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    &__toggle.open span:last-child {
+      transform: translate(0, -6px) rotate(-225deg);
+      transition: 0.5s ease;
+    }
+  }
+}

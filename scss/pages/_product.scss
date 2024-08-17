@@ -81,3 +81,23 @@
         margin-left: 8.5rem;
     }
 }
+
+
+@include mediaQuery(520px) {
+   .product {
+    // &__divider {
+    //     @include evenGrid(1, 10px);
+    // }
+    &__divider {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    &__wrapper {
+        @include evenGrid(1, 3rem);
+    }
+    &__search {
+        margin-left: 4.5rem;
+    }
+
+   } 
+}
